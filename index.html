@@ -10,6 +10,7 @@
 <meta property="og:description" content="Desenvolva as skills que o próximo passo do negócio exige. Um bootcamp para desenvolver as competências que vão definir o próximo estágio do negócio." />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="/assets/bg.jpg" />
+<link rel="icon" href="assets/logos.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -216,11 +217,21 @@
   .hero-desktop .cta-note{
     position:absolute;
     left:16.6667cqw;
-    top:39.9cqw;
+    top:40.55cqw;
+    display:inline-flex;
+    align-items:center;
+    gap:0.42cqw;
     font-size:0.68cqw;
     font-size:max(0.68cqw, 10px);
     color:rgba(255,255,255,0.65);
     white-space:nowrap;
+  }
+
+  .calendar-icon{
+    width:16px;
+    height:16px;
+    flex:0 0 16px;
+    object-fit:contain;
   }
 
   .hero-desktop .scroll-hint{
@@ -380,6 +391,13 @@
       height: max(5vw, 18px);
       transform:rotate(180deg);
       flex-shrink:0;
+    }
+
+    .hero-mobile .cta-note{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      color:rgba(255,255,255,0.65);
     }
 
     .hero-mobile .scroll-hint{
@@ -741,7 +759,19 @@
     color:#fff;
   }
 
-  .day-notice .dot{ font-size:1.1em; line-height:1; }
+  .day-notice--confirmed{
+    border-color:rgba(46,255,46,0.28);
+    background:var(--green);
+    box-shadow:0 0 18px rgba(0,173,0,0.26);
+  }
+
+  .day-notice--tbd{
+    border-color:rgba(255,255,255,0.14);
+    background:#555;
+    color:rgba(255,255,255,0.84);
+  }
+
+  .day-notice--tbd .calendar-icon{ filter:grayscale(1); opacity:0.72; }
 
   /* ---- Informações: local + certificado (light section, per Figma) ---- */
 
@@ -780,6 +810,11 @@
     line-height:1;
   }
 
+  .info-card .icon-box svg{
+    width:30px;
+    height:30px;
+  }
+
   .info-card h3{
     font-family:'Dela Gothic One', sans-serif;
     font-weight:400;
@@ -793,6 +828,65 @@
     font-size:14.5px;
     line-height:1.6;
     color:#AFAFAF;
+  }
+
+  @media (min-width:901px){
+    .section--sobre .section-title,
+    .section--sobre .section-lead,
+    .section--programacao .section-title{
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    .pillar-card h3{ font-size:16px; }
+    .pillar-card p{ font-size:14.5px; line-height:1.55; }
+
+    .agenda-grid{
+      grid-template-columns:1fr;
+      gap:22px;
+    }
+
+    .day-card{
+      display:grid;
+      grid-template-columns:minmax(340px, 0.9fr) minmax(0, 1.1fr);
+      grid-template-rows:auto 1fr auto;
+      column-gap:28px;
+      row-gap:16px;
+      padding:24px;
+    }
+
+    .day-card__top{
+      grid-column:1 / -1;
+      grid-row:1;
+    }
+
+    .day-card__image{
+      grid-column:1;
+      grid-row:2 / 4;
+      width:100%;
+      height:100%;
+      min-height:250px;
+    }
+
+    .day-card__content{
+      grid-column:2;
+      grid-row:2;
+      align-self:start;
+    }
+
+    .day-card h3{ font-size:21px; }
+    .day-card .desc-list{ gap:7px; }
+    .day-card .desc-list li{ font-size:14.5px; line-height:1.5; }
+    .day-card .meta{ font-size:14px; }
+    .day-pill,
+    .day-card__top .datetime{ font-size:12.5px; }
+
+    .day-notice{
+      grid-column:2;
+      grid-row:3;
+      margin-top:4px;
+      font-size:13.5px;
+    }
   }
 
   /* ---- Footer ---- */
@@ -883,7 +977,7 @@
       </svg>
     </a>
 
-    <p class="cta-note">📅 Confirme sua presença pela agenda</p>
+    <p class="cta-note"><img class="calendar-icon" src="assets/google-calendar-icon.webp" alt="" /><span>Confirme sua presença pela agenda</span></p>
 
     <div class="scroll-hint">
       <span>SAIBA MAIS</span>
@@ -920,7 +1014,7 @@
     </svg>
   </a>
 
-  <p class="cta-note">📅 Confirme sua presença pela agenda</p>
+  <p class="cta-note"><img class="calendar-icon" src="assets/google-calendar-icon.webp" alt="" /><span>Confirme sua presença pela agenda</span></p>
 
   <div class="scroll-hint">
     <span>SAIBA MAIS</span>
@@ -997,7 +1091,7 @@
           <span class="datetime">04/09/2026 (sex) · 9:00am – 6:00pm</span>
         </div>
         <div class="day-card__image"><img src="assets/negocios-card.jpg" alt="Time responsável por Negócios" /></div>
-        <div>
+        <div class="day-card__content">
           <h3>Negócios</h3>
           <ul class="desc-list">
             <li>Trusted advisor: curiosidade genuína e escuta ativa</li>
@@ -1011,7 +1105,7 @@
             <div><strong>Responsáveis: </strong>Erick, Lauar e Colli</div>
           </div>
         </div>
-        <span class="day-notice"><span class="dot">📅</span><span>Confirme sua presença pela agenda</span></span>
+        <span class="day-notice day-notice--confirmed"><img class="calendar-icon" src="assets/google-calendar-icon.webp" alt="" /><span>Confirme sua presença pela agenda</span></span>
       </div>
 
       <!-- DIA 2 -->
@@ -1021,7 +1115,7 @@
           <span class="datetime">05/09/2026 (sáb)</span>
         </div>
         <div class="day-card__image"><img src="assets/pessoas-card.jpg" alt="Time responsável por Gestão de Pessoas" /></div>
-        <div>
+        <div class="day-card__content">
           <h3>Gestão de Pessoas</h3>
           <ul class="desc-list">
             <li>Compliance</li>
@@ -1035,7 +1129,7 @@
             <div><strong>Responsáveis: </strong>Erick Cardoso, Luana Martire, Ednaldo Colli, Carolina Colli</div>
           </div>
         </div>
-        <span class="day-notice"><span class="dot">📅</span><span>Confirme sua presença pela agenda</span></span>
+        <span class="day-notice day-notice--confirmed"><img class="calendar-icon" src="assets/google-calendar-icon.webp" alt="" /><span>Confirme sua presença pela agenda</span></span>
       </div>
 
       <!-- DIA 3 -->
@@ -1045,7 +1139,7 @@
           <span class="datetime">25/09/2026 (sex)</span>
         </div>
         <div class="day-card__image"><img src="assets/creative-card.jpg" alt="Time responsável por Creative Specialist" /></div>
-        <div>
+        <div class="day-card__content">
           <h3>Creative Specialist</h3>
           <ul class="desc-list">
             <li>Como produzir mensagens e peças que conectam com o cliente</li>
@@ -1059,7 +1153,7 @@
             <div><strong>Responsáveis: </strong>Vitor Neres, Larissa Idem, Leonardo Esteves</div>
           </div>
         </div>
-        <span class="day-notice"><span class="dot">📅</span><span>Confirme sua presença pela agenda</span></span>
+        <span class="day-notice day-notice--tbd"><img class="calendar-icon" src="assets/google-calendar-icon.webp" alt="" /><span>Agenda em breve (TBD)</span></span>
       </div>
 
       <!-- DIA 4 -->
@@ -1069,7 +1163,7 @@
           <span class="datetime">26/09/2026 (sáb)</span>
         </div>
         <div class="day-card__image"><img src="assets/growth-card.jpg" alt="Time responsável por Growth Engineer" /></div>
-        <div>
+        <div class="day-card__content">
           <h3>Growth Engineer</h3>
           <ul class="desc-list">
             <li>Como integrar sistemas e dados pra gerar receita</li>
@@ -1083,7 +1177,7 @@
             <div><strong>Responsáveis: </strong>João Pedro Moreira, Jean Reis, Robson Job, Luís Felipe Santos</div>
           </div>
         </div>
-        <span class="day-notice"><span class="dot">📅</span><span>Confirme sua presença pela agenda</span></span>
+        <span class="day-notice day-notice--tbd"><img class="calendar-icon" src="assets/google-calendar-icon.webp" alt="" /><span>Agenda em breve (TBD)</span></span>
       </div>
 
     </div>
@@ -1098,17 +1192,24 @@
 
     <div class="info-grid">
       <div class="info-card reveal">
-        <div class="icon-box">📍</div>
+        <div class="icon-box">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="6" y="4" width="20" height="18" rx="3" stroke="white" stroke-width="2"/>
+            <path d="M11 9H21M11 13H18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="21" cy="21" r="4" fill="#FF2628" stroke="white" stroke-width="2"/>
+            <path d="M18.6 24.2L18 29L21 27.2L24 29L23.4 24.2" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </div>
         <div>
-          <h3>Presencial em Campinas</h3>
-          <p>Todos os encontros acontecem presencialmente em Campinas, com transmissão ao vivo pra quem está em outro time ou não puder estar no local.</p>
+          <h3>Certificado de participação</h3>
+          <p>O certificado será emitido somente para quem confirmar presença na agenda e cumprir o tempo mínimo de participação no treinamento.</p>
         </div>
       </div>
       <div class="info-card reveal">
-        <div class="icon-box">📜</div>
+        <div class="icon-box">📍</div>
         <div>
-          <h3>Gera certificado</h3>
-          <p>Toda participação confirmada emite certificado. Conteúdo fechado direto com os especialistas da V4 Colli&amp;Co pra você aplicar no dia a dia.</p>
+          <h3>Treinamento presencial em Campinas</h3>
+          <p>Todos os encontros acontecem presencialmente em Campinas. Quem estiver em outro time ou não puder estar no local poderá acompanhar pela transmissão ao vivo.</p>
         </div>
       </div>
     </div>
