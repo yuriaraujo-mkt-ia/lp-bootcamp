@@ -161,12 +161,14 @@
     color:#fff;
   }
 
+  br.desktop-break{ display:none; }
+
   .hero-desktop h1 .accent{ color:#FF2628; }
 
   .hero-desktop .subtext{
     position:absolute;
     left:13.45cqw;
-    top:28.38cqw;
+    top:30.6cqw;
     width:29.3cqw;
     font-size:1.18cqw;
     line-height:1.38;
@@ -237,7 +239,7 @@
   .hero-desktop .scroll-hint{
     position:absolute;
     left:50%;
-    top:38.82cqw;
+    top:43.4cqw;
     transform:translateX(-50%);
     display:flex;
     flex-direction:column;
@@ -855,10 +857,18 @@
       margin-right:auto;
     }
 
-    .section--sobre .section-lead{ max-width:700px; }
-    .pillar-card h3{ font-size:24px; }
+    br.desktop-break{ display:block; }
+
+    .section--sobre .section-lead{ max-width:860px; }
+    .pillar-card h3{ font-size:21px; }
     .pillar-card p{ font-size:16px; line-height:1.55; }
-    .section--sobre .section-cta .btn-cta{ font-size:18px; }
+    .section--sobre .section-cta .btn-cta,
+    .section--info .section-cta .btn-cta{
+      height:60px;
+      padding:0 34px;
+      gap:12px;
+      font-size:18px;
+    }
 
     .section--info .info-grid{
       gap:36px;
@@ -931,18 +941,19 @@
       width:100%;
       height:auto;
       min-height:0;
-      aspect-ratio:516 / 232;
-      align-self:start;
+      align-self:stretch;
     }
 
     .day-card__side{
       grid-column:2;
       grid-row:2;
       min-width:0;
+      min-height:0;
       display:flex;
       flex-direction:column;
       justify-content:space-between;
       gap:24px;
+      align-self:stretch;
     }
 
     .day-card__content{
@@ -1037,7 +1048,7 @@
       <div class="badge-pill"><span>CERTIFICADO INCLUSO</span></div>
     </div>
 
-    <h1>Desenvolva as skills que o <span class="accent">próximo passo</span> do negócio exige.</h1>
+    <h1>Desenvolva as<br class="desktop-break" />skills que o<br class="desktop-break" /><span class="accent">próximo passo</span><br class="desktop-break" />do negócio exige.</h1>
 
     <p class="subtext">
       <span class="light">Um bootcamp para desenvolver as competências que</span><span class="bold"> vão definir o próximo estágio do negócio.</span>
@@ -1113,7 +1124,7 @@
   <div class="container">
     <span class="eyebrow reveal">Sobre o Bootcamp</span>
     <h2 class="section-title reveal">Quatro frentes. Um só objetivo.</h2>
-    <p class="section-lead reveal">O Bootcamp Next Steps foi desenhado pra treinar o time nas disciplinas-chave do negócio e apoiar a validação da tese de cada frente. São 4 encontros, divididos em 2 finais de semana.</p>
+    <p class="section-lead reveal">O Bootcamp Next Steps foi desenhado pra treinar o time nas disciplinas-chave do negócio e <br class="desktop-break" /> apoiar a validação da tese de cada frente. São 4 encontros, divididos em 2 finais de semana.</p>
 
     <div class="pillars-grid">
       <div class="pillar-card reveal">
