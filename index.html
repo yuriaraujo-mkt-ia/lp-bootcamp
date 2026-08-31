@@ -822,6 +822,12 @@
     height:30px;
   }
 
+  .info-card .icon-box img{
+    width:30px;
+    height:30px;
+    display:block;
+  }
+
   .info-card h3{
     font-family:'Dela Gothic One', sans-serif;
     font-weight:400;
@@ -837,6 +843,10 @@
     color:#AFAFAF;
   }
 
+  .section--info .section-cta .btn-cta svg{
+    transform:rotate(0deg);
+  }
+
   @media (min-width:901px){
     .section--sobre .section-title,
     .section--sobre .section-lead,
@@ -849,6 +859,51 @@
     .pillar-card h3{ font-size:24px; }
     .pillar-card p{ font-size:16px; line-height:1.55; }
     .section--sobre .section-cta .btn-cta{ font-size:18px; }
+
+    .section--info .info-grid{
+      gap:36px;
+    }
+
+    .section--info .info-card{
+      flex-direction:column;
+      align-items:center;
+      gap:24px;
+      min-height:330px;
+      padding:48px 56px 52px;
+      border-radius:24px;
+      text-align:center;
+    }
+
+    .section--info .info-card .icon-box{
+      width:76px;
+      height:76px;
+      border-radius:18px;
+      font-size:0;
+    }
+
+    .section--info .info-card .icon-box img{
+      width:42px;
+      height:42px;
+    }
+
+    .section--info .info-card > div:last-child{
+      width:100%;
+    }
+
+    .section--info .info-card h3{
+      font-size:24px;
+      line-height:1.25;
+    }
+
+    .section--info .info-card p{
+      margin-top:14px;
+      font-size:16px;
+      line-height:1.6;
+    }
+
+    .section--info .section-cta .btn-cta{
+      font-size:18px;
+    }
 
     .agenda-grid{
       grid-template-columns:1fr;
@@ -1220,12 +1275,7 @@
     <div class="info-grid">
       <div class="info-card reveal">
         <div class="icon-box">
-          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="6" y="4" width="20" height="18" rx="3" stroke="white" stroke-width="2"/>
-            <path d="M11 9H21M11 13H18" stroke="white" stroke-width="2" stroke-linecap="round"/>
-            <circle cx="21" cy="21" r="4" fill="#FF2628" stroke="white" stroke-width="2"/>
-            <path d="M18.6 24.2L18 29L21 27.2L24 29L23.4 24.2" stroke="white" stroke-width="2" stroke-linejoin="round"/>
-          </svg>
+          <img src="assets/icons/icon-certificate.svg" alt="" />
         </div>
         <div>
           <h3>Certificado de participação</h3>
@@ -1233,7 +1283,9 @@
         </div>
       </div>
       <div class="info-card reveal">
-        <div class="icon-box">📍</div>
+        <div class="icon-box">
+          <img src="assets/icons/icon-location.svg" alt="" />
+        </div>
         <div>
           <h3>Treinamento presencial em Campinas</h3>
           <p>Todos os encontros acontecem presencialmente em Campinas. Quem estiver em outro time ou não puder estar no local poderá acompanhar pela transmissão ao vivo.</p>
