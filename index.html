@@ -1,0 +1,1246 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bootcamp Next Steps | V4 Colli&amp;Co</title>
+<meta name="description" content="Desenvolva as skills que o próximo passo do negócio exige. Confirme sua presença no Bootcamp Next Steps — V4 Colli&Co." />
+
+<meta property="og:title" content="Bootcamp Next Steps | V4 Colli&Co" />
+<meta property="og:description" content="Desenvolva as skills que o próximo passo do negócio exige. Um bootcamp para desenvolver as competências que vão definir o próximo estágio do negócio." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="/assets/bg.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --green: #00AD00;
+    --pill-border: #CE1800;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  html{ scroll-behavior:smooth; }
+
+  html,body{
+    background:#000;
+    color:#fff;
+    font-family:'IBM Plex Sans', Arial, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    text-wrap:balance;
+    width:100%;
+    overflow-x:hidden !important;
+  }
+
+  ::-webkit-scrollbar{ display:none; }
+  html{ -ms-overflow-style:none; scrollbar-width:none; }
+
+  /* TEXTURA */
+  html::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-image:radial-gradient(at 20% 80%, #fff 1px, transparent 0px);
+    background-size:5px 5px;
+    pointer-events:none;
+    z-index:999;
+    opacity:0.04;
+    mix-blend-mode:plus-lighter;
+    user-select:none;
+  }
+
+  img{ display:block; max-width:100%; }
+
+  a{ color:inherit; text-decoration:none; }
+
+  /* ============ DESKTOP HERO (>=901px) — pixel-mapped 1:1 from Figma (1920x900) ============ */
+
+  /* particles: one fixed canvas behind all page content, visible across every section */
+  .particles-wrapper{
+    position:fixed;
+    inset:0;
+    z-index:1;
+    overflow:hidden;
+    pointer-events:none;
+  }
+
+  .particles-wrapper canvas{
+    display:block;
+    width:100%;
+    height:100%;
+  }
+
+  .hero-desktop{
+    position:relative;
+    width:100%;
+    max-width:1920px;
+    margin:0 auto;
+    aspect-ratio:1920/926;
+    overflow:hidden;
+    container-type: inline-size;
+    background:#000;
+  }
+
+  .hero-desktop .bg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:0;
+  }
+
+  .hero-desktop .content{
+    position:absolute;
+    inset:0;
+    z-index:2;
+  }
+
+  .hero-desktop .logo-lockup{
+    position:absolute;
+    left:16.7188cqw;
+    top:4.0281cqw;
+    width:22.822cqw;
+    height:auto;
+  }
+
+  .hero-desktop .badges{
+    position:absolute;
+    left:16.7208cqw;
+    top:13.0729cqw;
+    display:flex;
+    align-items:center;
+    gap:0.7013cqw;
+  }
+
+  .hero-desktop .badge-pill{
+    position:relative;
+    height:2.2791cqw;
+    min-height:30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0 1.6cqw;
+    border:0.0238cqw solid rgba(206,24,0,0.4);
+    border-width: max(0.0238cqw, 1px);
+    background:rgba(115,16,21,0.11);
+    backdrop-filter:blur(20px) saturate(1.8);
+    -webkit-backdrop-filter:blur(20px) saturate(1.8);
+    border-radius:999px;
+    color:#fff;
+    box-shadow: inset 0 1px 1px rgba(255,255,255,0.14), inset 0 -8px 14px rgba(0,0,0,0.22);
+    overflow:hidden;
+  }
+
+  .hero-desktop .badge-pill span{
+    font-size:0.7562cqw;
+    font-size: max(0.7562cqw, 10px);
+    letter-spacing:0.02em;
+    line-height:1.3;
+    white-space:nowrap;
+  }
+
+  .hero-desktop h1{
+    position:absolute;
+    left:16.7208cqw;
+    top:17.6068cqw;
+    width:30.4144cqw;
+    font-family:'Dela Gothic One', 'IBM Plex Sans', sans-serif;
+    font-weight:400;
+    font-style:normal;
+    text-transform:uppercase;
+    font-size:2.3409cqw;
+    line-height:1.21;
+    color:#fff;
+  }
+
+  .hero-desktop h1 .accent{ color:#FF2628; }
+
+  .hero-desktop .subtext{
+    position:absolute;
+    left:16.7208cqw;
+    top:29.7703cqw;
+    width:28.0791cqw;
+    font-size:1.2530cqw;
+    line-height:1.18;
+  }
+
+  .hero-desktop .subtext .light{ color:rgba(255,255,255,0.85); font-weight:400; }
+  .hero-desktop .subtext .bold{ color:#fff; font-weight:700; }
+
+  .hero-desktop .cta{
+    position:absolute;
+    left:16.6667cqw;
+    top:35.3380cqw;
+    height:4.4363cqw;
+    min-height:54px;
+    background:var(--green);
+    border:0.0902cqw solid rgba(46,255,46,0.22);
+    border-radius:0.7218cqw;
+    box-shadow:0 0 2.3638cqw rgba(0,173,0,0.47);
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:0.7397cqw;
+    padding:0 2.2cqw;
+    cursor:pointer;
+    transition:filter .15s ease, transform .15s ease;
+  }
+
+  .hero-desktop .cta:hover{ filter:brightness(1.08); }
+  .hero-desktop .cta:active{ transform:scale(0.98); }
+
+  .hero-desktop .cta span{
+    font-size:1.1461cqw;
+    font-size: max(1.1461cqw, 13px);
+    font-weight:600;
+    white-space:nowrap;
+    letter-spacing:0.01em;
+  }
+
+  .hero-desktop .cta svg{
+    width:1.3635cqw;
+    width: max(1.3635cqw, 16px);
+    height:1.3635cqw;
+    height: max(1.3635cqw, 16px);
+    transform:rotate(180deg);
+    flex-shrink:0;
+  }
+
+  .hero-desktop .cta-note{
+    position:absolute;
+    left:16.6667cqw;
+    top:39.9cqw;
+    font-size:0.68cqw;
+    font-size:max(0.68cqw, 10px);
+    color:rgba(255,255,255,0.65);
+    white-space:nowrap;
+  }
+
+  .hero-desktop .scroll-hint{
+    position:absolute;
+    left:50%;
+    top:41.4062cqw;
+    transform:translateX(-50%);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:0.9cqw;
+  }
+
+  .hero-desktop .scroll-hint span{
+    font-size:0.7292cqw;
+    font-size: max(0.7292cqw, 10px);
+    letter-spacing:0.6125cqw;
+    color:#fff;
+    white-space:nowrap;
+  }
+
+  .hero-desktop .scroll-hint .arrow-wrap{
+    animation: bob 1.8s ease-in-out infinite;
+  }
+
+  .hero-desktop .scroll-hint svg{
+    width:1.1cqw;
+    width: max(1.1cqw, 12px);
+    height:1.1cqw;
+    height: max(1.1cqw, 12px);
+    transform:rotate(90deg);
+    display:block;
+  }
+
+  @keyframes bob{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(5px); }
+  }
+
+  /* ============ MOBILE HERO (<=900px) ============ */
+
+  .hero-mobile{ display:none; }
+
+  @media (max-width:900px){
+    .hero-desktop{ display:none; }
+
+    .hero-mobile{
+      display:block;
+      position:relative;
+      z-index:2;
+      width:100%;
+      overflow-x:hidden;
+      background:#000 url('assets/bg-mobile.jpg') no-repeat top center;
+      background-size:100% auto;
+      padding: 46.4vw 8vw 8vw;
+      min-height: 165vw;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+    }
+
+    .hero-mobile .logo-lockup{
+      width:52vw;
+      max-width:230px;
+      height:auto;
+    }
+
+    .hero-mobile .badges{
+      margin-top:4.5vw;
+      display:flex;
+      flex-wrap:nowrap;
+      align-items:center;
+      justify-content:center;
+      gap:1.2vw;
+      max-width:96vw;
+    }
+
+    .hero-mobile .badge-pill{
+      position:relative;
+      border:1px solid rgba(206,24,0,0.4);
+      background:rgba(115,16,21,0.11);
+      backdrop-filter:blur(16px) saturate(1.8);
+      -webkit-backdrop-filter:blur(16px) saturate(1.8);
+      border-radius:999px;
+      padding:1.6vw 2.2vw;
+      color:#fff;
+      box-shadow: inset 0 1px 1px rgba(255,255,255,0.14), inset 0 -8px 14px rgba(0,0,0,0.22);
+      overflow:hidden;
+      flex-shrink:1;
+      min-width:0;
+    }
+
+    .hero-mobile .badge-pill span{
+      font-size:2.05vw;
+      font-size: max(2.05vw, 7.6px);
+      letter-spacing:0.01em;
+      line-height:1.4;
+      white-space:nowrap;
+    }
+
+    .hero-mobile h1{
+      margin-top:5vw;
+      max-width:88vw;
+      font-family:'Dela Gothic One', 'IBM Plex Sans', sans-serif;
+      font-weight:400;
+      text-transform:uppercase;
+      font-size:6.1vw;
+      line-height:1.25;
+      color:#fff;
+    }
+
+    .hero-mobile h1 .accent{ color:#FF2628; }
+
+    .hero-mobile .subtext{
+      margin-top:5.5vw;
+      font-size:3.6vw;
+      line-height:1.45;
+      max-width:82vw;
+    }
+
+    .hero-mobile .subtext .light{ color:rgba(255,255,255,0.85); font-weight:400; }
+    .hero-mobile .subtext .bold{ color:#fff; font-weight:700; }
+
+    .hero-mobile .cta{
+      margin-top:7.5vw;
+      width:100%;
+      max-width:340px;
+      height:14vw;
+      min-height:52px;
+      background:var(--green);
+      border:1.5px solid rgba(46,255,46,0.22);
+      border-radius:3.2vw;
+      box-shadow:0 0 9vw rgba(0,173,0,0.47);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:2.8vw;
+      cursor:pointer;
+      transition:filter .15s ease, transform .15s ease;
+    }
+
+    .hero-mobile .cta:active{ transform:scale(0.98); }
+
+    .hero-mobile .cta span{
+      font-size:3.8vw;
+      font-size: max(3.8vw, 14px);
+      font-weight:600;
+      white-space:nowrap;
+      letter-spacing:0.01em;
+    }
+
+    .hero-mobile .cta svg{
+      width:5vw;
+      width: max(5vw, 18px);
+      height:5vw;
+      height: max(5vw, 18px);
+      transform:rotate(180deg);
+      flex-shrink:0;
+    }
+
+    .hero-mobile .scroll-hint{
+      margin-top:6vw;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:1.5vw;
+    }
+
+    .hero-mobile .scroll-hint span{
+      font-size:2.6vw;
+      font-size: max(2.6vw, 10px);
+      letter-spacing:2.5vw;
+      color:#fff;
+      white-space:nowrap;
+    }
+
+    .hero-mobile .scroll-hint .arrow-wrap{ animation: bob 1.8s ease-in-out infinite; }
+
+    .hero-mobile .scroll-hint svg{
+      width:4vw;
+      width: max(4vw, 13px);
+      height:4vw;
+      height: max(4vw, 13px);
+      transform:rotate(90deg);
+      display:block;
+    }
+  }
+
+  /* ============ FAIXA DIVISOR (marquee carousel) ============ */
+
+  .faixa-divisor{
+    position:relative;
+    z-index:2;
+    width:100%;
+    overflow:hidden;
+    background:#0f0f0f;
+    border-top:1px solid rgba(255,255,255,0.25);
+    border-bottom:1px solid rgba(255,255,255,0.25);
+    padding:28px 0;
+  }
+
+  .faixa-divisor__track{
+    display:flex;
+    width:max-content;
+    animation: marquee 45s linear infinite;
+  }
+
+  .faixa-divisor__track span{
+    font-family:'IBM Plex Sans', sans-serif;
+    font-weight:400;
+    font-size:12px;
+    letter-spacing:6px;
+    color:#fff;
+    opacity:0.61;
+    white-space:nowrap;
+  }
+
+  @keyframes marquee{
+    from{ transform:translateX(0); }
+    to{ transform:translateX(-50%); }
+  }
+
+  @media (max-width:900px){
+    .faixa-divisor{ padding:18px 0; }
+    .faixa-divisor__track span{ font-size:10px; letter-spacing:3px; }
+    .faixa-divisor__track{ animation-duration:32s; }
+  }
+
+  /* ============ SCROLL REVEAL ============ */
+
+  .reveal{
+    opacity:0;
+    transform:translateY(28px);
+    transition:opacity .8s cubic-bezier(.16,.8,.24,1), transform .8s cubic-bezier(.16,.8,.24,1);
+  }
+
+  .reveal.is-visible{ opacity:1; transform:translateY(0); }
+
+  .pillars-grid > .reveal:nth-child(2),
+  .agenda-grid > .reveal:nth-child(2),
+  .info-grid > .reveal:nth-child(2){ transition-delay:0.09s; }
+  .pillars-grid > .reveal:nth-child(3){ transition-delay:0.18s; }
+  .pillars-grid > .reveal:nth-child(4){ transition-delay:0.27s; }
+  .agenda-grid > .reveal:nth-child(3){ transition-delay:0.12s; }
+  .agenda-grid > .reveal:nth-child(4){ transition-delay:0.2s; }
+
+  /* ============ SHARED SECTION SYSTEM (below the fold) ============ */
+
+  .section{
+    position:relative;
+    overflow:hidden;
+    padding:64px 24px;
+  }
+
+  .section > .container{ position:relative; z-index:1; }
+
+  .container{
+    max-width:1180px;
+    margin:0 auto;
+  }
+
+  .eyebrow{
+    display:block;
+    font-size:16px;
+    font-weight:400;
+    letter-spacing:0.25em;
+    text-transform:uppercase;
+    color:#FF2628;
+  }
+
+  .section-title{
+    margin-top:18px;
+    font-family:'Dela Gothic One', 'IBM Plex Sans', sans-serif;
+    font-weight:400;
+    text-transform:uppercase;
+    line-height:1.16;
+    font-size:clamp(26px, 3.6vw, 42px);
+    color:#fff;
+    max-width:820px;
+  }
+
+  .section-lead{
+    margin-top:18px;
+    font-size:clamp(15px, 1.6vw, 18px);
+    line-height:1.65;
+    color:rgba(255,255,255,0.72);
+    max-width:620px;
+  }
+
+  .section-lead b{ color:#fff; font-weight:700; }
+
+  /* ---- Reusable big green CTA ---- */
+
+  .btn-cta{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    height:50px;
+    padding:0 24px;
+    background:var(--green);
+    border:1.5px solid rgba(46,255,46,0.22);
+    border-radius:12px;
+    box-shadow:0 0 26px rgba(0,173,0,0.4);
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:0.01em;
+    color:#fff;
+    white-space:nowrap;
+    transition:filter .15s ease, transform .15s ease;
+  }
+
+  .btn-cta:hover{ filter:brightness(1.08); }
+  .btn-cta:active{ transform:scale(0.98); }
+
+  .btn-cta svg{ width:16px; height:16px; transform:rotate(180deg); flex-shrink:0; }
+
+  .section-cta{
+    margin-top:32px;
+    display:flex;
+    justify-content:center;
+  }
+
+  /* ---- Sobre: pillars strip (cqw-scaled, base 1275px = Figma frame width) ---- */
+
+  .section--sobre .container{ text-align:center; }
+
+  .pillars-grid{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:16px;
+  }
+
+  .pillar-card{
+    position:relative;
+    background:#1a1a1a;
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:14px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    padding-bottom:20px;
+  }
+
+  .pillar-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:56px;
+    height:5px;
+    background:#FF2628;
+    border-radius:0 0 8px 8px;
+    box-shadow:0 2px 8px rgba(255,38,40,0.44);
+  }
+
+  .pillar-card .icon-box{
+    margin-top:22px;
+    width:52px;
+    height:52px;
+    border-radius:10px;
+    background:rgba(255,38,40,0.2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+  }
+
+  .pillar-card .icon-box img{ width:56%; height:56%; display:block; }
+
+  .pillar-card h3{
+    margin-top:12px;
+    font-family:'Dela Gothic One', sans-serif;
+    font-weight:400;
+    font-size:15px;
+    line-height:1.3;
+    color:#fff;
+    text-transform:uppercase;
+    padding:0 14px;
+  }
+
+  .pillar-card p{
+    margin-top:8px;
+    padding:0 16px;
+    font-size:13px;
+    line-height:1.5;
+    color:#AFAFAF;
+  }
+
+  /* ---- Programação: day cards ---- */
+
+  .section--programacao .container{ text-align:center; }
+
+  .agenda-grid{
+    margin-top:36px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    text-align:left;
+  }
+
+  .day-card{
+    position:relative;
+    border:1px solid rgba(255,255,255,0.2);
+    background:#1a1a1a;
+    border-radius:16px;
+    padding:22px 24px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+
+  .day-card__top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+  }
+
+  .day-pill{
+    flex-shrink:0;
+    background:#FF2628;
+    color:#fff;
+    font-size:11.5px;
+    font-weight:600;
+    letter-spacing:0.02em;
+    text-transform:uppercase;
+    border-radius:20px;
+    padding:5px 12px;
+  }
+
+  .day-card__top .datetime{
+    font-size:11.5px;
+    color:rgba(255,255,255,0.7);
+    text-transform:uppercase;
+    text-align:right;
+  }
+
+  .day-card__image{
+    height:96px;
+    border-radius:12px;
+    background:#171717;
+    border:1px solid rgba(255,255,255,0.08);
+    overflow:hidden;
+  }
+
+  .day-card__image img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+  .day-card h3{
+    font-family:'Dela Gothic One', sans-serif;
+    font-weight:400;
+    text-transform:uppercase;
+    font-size:18px;
+    color:#fff;
+  }
+
+  .day-card .desc-list{
+    margin-top:8px;
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+  }
+
+  .day-card .desc-list li{
+    position:relative;
+    padding-left:13px;
+    font-size:12.5px;
+    line-height:1.45;
+    color:#AFAFAF;
+    list-style:none;
+  }
+
+  .day-card .desc-list li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0.6em;
+    width:4px;
+    height:4px;
+    border-radius:50%;
+    background:#FF2628;
+  }
+
+  .day-card .divider{
+    margin-top:10px;
+    border:none;
+    border-top:1px solid rgba(255,255,255,0.15);
+  }
+
+  .day-card .meta{
+    margin-top:8px;
+    font-size:12.5px;
+    line-height:1.55;
+    color:#fff;
+  }
+
+  .day-card .meta strong{ color:#FF2628; font-weight:700; }
+
+  .day-notice{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    align-self:flex-start;
+    border:1px solid rgba(255,255,255,0.22);
+    background:rgba(255,255,255,0.05);
+    border-radius:10px;
+    height:42px;
+    padding:0 16px;
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:0.01em;
+    color:#fff;
+  }
+
+  .day-notice .dot{ font-size:1.1em; line-height:1; }
+
+  /* ---- Informações: local + certificado (light section, per Figma) ---- */
+
+  .section--info{ background:#fff; }
+  .section--info .container{ text-align:center; }
+  .section--info .section-title{ margin-left:auto; margin-right:auto; color:#151515; }
+
+  .info-grid{
+    margin-top:48px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    text-align:left;
+  }
+
+  .info-card{
+    display:flex;
+    align-items:flex-start;
+    gap:20px;
+    border:1px solid rgba(255,255,255,0.2);
+    background:#1a1a1a;
+    border-radius:20px;
+    padding:30px;
+  }
+
+  .info-card .icon-box{
+    flex-shrink:0;
+    width:56px;
+    height:56px;
+    border-radius:12px;
+    background:rgba(255,38,40,0.2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+    line-height:1;
+  }
+
+  .info-card h3{
+    font-family:'Dela Gothic One', sans-serif;
+    font-weight:400;
+    text-transform:uppercase;
+    font-size:17px;
+    color:#fff;
+  }
+
+  .info-card p{
+    margin-top:10px;
+    font-size:14.5px;
+    line-height:1.6;
+    color:#AFAFAF;
+  }
+
+  /* ---- Footer ---- */
+
+  .site-footer{
+    position:relative;
+    z-index:2;
+    background:#000;
+    border-top:1px solid rgba(255,255,255,0.08);
+    padding:36px 24px;
+  }
+
+  .site-footer .container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+
+  .site-footer .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:13px;
+    color:rgba(255,255,255,0.5);
+  }
+
+  .site-footer img{ height:22px; width:auto; opacity:0.8; }
+
+  .site-footer .fine{ font-size:12.5px; color:rgba(255,255,255,0.4); }
+
+  @media (max-width:900px){
+    .section{ padding:64px 20px; }
+
+    /* below 900px the layout reflows to 1-2 columns — the cqw-based
+       max-widths above assume the full desktop container, so free them here */
+    .section--sobre .section-title,
+    .section--programacao .section-title{ max-width:none; font-size:30px; }
+    .section--sobre .section-lead{ max-width:none; font-size:15.5px; }
+    .pillar-card p{ max-width:none; }
+    .day-card .desc-list{ max-width:none; }
+    .day-card .divider{ max-width:none; }
+
+    .pillars-grid{ grid-template-columns:1fr 1fr; gap:14px; margin-top:36px; }
+    .pillar-card{ min-height:0; height:auto; padding-bottom:24px; }
+    .pillar-card .icon-box{ margin-top:24px; width:56px; height:56px; }
+    .agenda-grid{ grid-template-columns:1fr; margin-top:36px; }
+    .info-grid{ grid-template-columns:1fr; margin-top:36px; }
+  }
+
+  @media (max-width:560px){
+    .pillars-grid{ grid-template-columns:1fr; }
+    .site-footer .container{ flex-direction:column; align-items:flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div class="particles-wrapper"><canvas id="hero-stars"></canvas></div>
+
+<!-- DESKTOP -->
+<section class="hero-desktop" aria-hidden="false">
+  <video class="bg" autoplay muted loop playsinline preload="auto" poster="assets/bg-hero-poster.jpg">
+    <source src="assets/bg-hero.mp4" type="video/mp4" />
+  </video>
+
+  <div class="content">
+    <img class="logo-lockup" src="assets/logos.png" alt="V4 Colli&Co — Bootcamp Next Steps" />
+
+    <div class="badges">
+      <div class="badge-pill"><span>4 DIAS</span></div>
+      <div class="badge-pill"><span>PRESENCIAL E AO VIVO</span></div>
+      <div class="badge-pill"><span>CERTIFICADO INCLUSO</span></div>
+    </div>
+
+    <h1>Desenvolva as skills que o <span class="accent">próximo passo</span> do negócio exige.</h1>
+
+    <p class="subtext">
+      <span class="light">Um bootcamp para desenvolver as competências que</span><span class="bold"> vão definir o próximo estágio do negócio.</span>
+    </p>
+
+    <a class="cta" href="#programacao">
+      <span>VER PROGRAMAÇÃO</span>
+      <svg viewBox="0 0 25.1057 25.1057" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.60864e-05 12.5528C5.60864e-05 22.8901 2.21563 25.1057 12.5529 25.1057C22.8901 25.1057 25.1057 22.8901 25.1057 12.5528C25.1057 2.21557 22.8901 0 12.5529 0C2.21563 0 5.60864e-05 2.21557 5.60864e-05 12.5528ZM2.09219 12.5528C2.09219 15.0894 2.23084 16.9849 2.55007 18.4214C2.86401 19.834 3.32413 20.6712 3.87936 21.2263C4.43459 21.7816 5.27171 22.2417 6.68436 22.5556C8.12076 22.8749 10.0163 23.0135 12.5529 23.0135C15.0895 23.0135 16.985 22.8749 18.4214 22.5556C19.834 22.2417 20.6712 21.7816 21.2264 21.2263C21.7816 20.6712 22.2418 19.834 22.5557 18.4214C22.875 16.9849 23.0136 15.0894 23.0136 12.5528C23.0136 10.0163 22.875 8.1207 22.5557 6.68431C22.2418 5.27165 21.7816 4.43454 21.2264 3.8793C20.6712 3.32407 19.834 2.86396 18.4214 2.55001C16.985 2.23078 15.0895 2.09214 12.5529 2.09214C10.0163 2.09214 8.12076 2.23078 6.68436 2.55001C5.27171 2.86396 4.43459 3.32407 3.87936 3.8793C3.32413 4.43454 2.86401 5.27165 2.55007 6.68431C2.23084 8.1207 2.09219 10.0163 2.09219 12.5528Z" fill="white"/>
+        <path d="M13.2941 9.72218C12.8857 9.31367 12.2233 9.31367 11.8148 9.72218L7.63051 13.9065C7.222 14.315 7.222 14.9773 7.63051 15.3858C8.03904 15.7943 8.70136 15.7943 9.10989 15.3858L12.5545 11.9412L15.9991 15.3858C16.4076 15.7943 17.0699 15.7943 17.4784 15.3858C17.8869 14.9773 17.8869 14.315 17.4784 13.9065L13.2941 9.72218Z" fill="white"/>
+      </svg>
+    </a>
+
+    <p class="cta-note">📅 Confirme sua presença pela agenda</p>
+
+    <div class="scroll-hint">
+      <span>SAIBA MAIS</span>
+      <div class="arrow-wrap">
+        <svg viewBox="0 0 31.5 7.36396" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M31.3536 4.03553C31.5488 3.84027 31.5488 3.52369 31.3536 3.32843L28.1716 0.146447C27.9763 -0.0488155 27.6597 -0.0488155 27.4645 0.146447C27.2692 0.341709 27.2692 0.658291 27.4645 0.853554L30.2929 3.68198L27.4645 6.51041C27.2692 6.70567 27.2692 7.02225 27.4645 7.21751C27.6597 7.41278 27.9763 7.41278 28.1716 7.21751L31.3536 4.03553ZM0 3.68198V4.18198H31V3.68198V3.18198H0V3.68198Z" fill="white"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MOBILE -->
+<section class="hero-mobile">
+  <img class="logo-lockup" src="assets/logos.png" alt="V4 Colli&Co — Bootcamp Next Steps" />
+
+  <div class="badges">
+    <div class="badge-pill"><span>4 DIAS</span></div>
+    <div class="badge-pill"><span>PRESENCIAL E AO VIVO</span></div>
+    <div class="badge-pill"><span>CERTIFICADO INCLUSO</span></div>
+  </div>
+
+  <h1>Desenvolva as skills que o <span class="accent">próximo passo</span> do negócio exige.</h1>
+
+  <p class="subtext">
+    <span class="light">Um bootcamp para desenvolver as competências que</span><span class="bold"> vão definir o próximo estágio do negócio.</span>
+  </p>
+
+  <a class="cta" href="#programacao">
+    <span>VER PROGRAMAÇÃO</span>
+    <svg viewBox="0 0 25.1057 25.1057" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M5.60864e-05 12.5528C5.60864e-05 22.8901 2.21563 25.1057 12.5529 25.1057C22.8901 25.1057 25.1057 22.8901 25.1057 12.5528C25.1057 2.21557 22.8901 0 12.5529 0C2.21563 0 5.60864e-05 2.21557 5.60864e-05 12.5528ZM2.09219 12.5528C2.09219 15.0894 2.23084 16.9849 2.55007 18.4214C2.86401 19.834 3.32413 20.6712 3.87936 21.2263C4.43459 21.7816 5.27171 22.2417 6.68436 22.5556C8.12076 22.8749 10.0163 23.0135 12.5529 23.0135C15.0895 23.0135 16.985 22.8749 18.4214 22.5556C19.834 22.2417 20.6712 21.7816 21.2264 21.2263C21.7816 20.6712 22.2418 19.834 22.5557 18.4214C22.875 16.9849 23.0136 15.0894 23.0136 12.5528C23.0136 10.0163 22.875 8.1207 22.5557 6.68431C22.2418 5.27165 21.7816 4.43454 21.2264 3.8793C20.6712 3.32407 19.834 2.86396 18.4214 2.55001C16.985 2.23078 15.0895 2.09214 12.5529 2.09214C10.0163 2.09214 8.12076 2.23078 6.68436 2.55001C5.27171 2.86396 4.43459 3.32407 3.87936 3.8793C3.32413 4.43454 2.86401 5.27165 2.55007 6.68431C2.23084 8.1207 2.09219 10.0163 2.09219 12.5528Z" fill="white"/>
+      <path d="M13.2941 9.72218C12.8857 9.31367 12.2233 9.31367 11.8148 9.72218L7.63051 13.9065C7.222 14.315 7.222 14.9773 7.63051 15.3858C8.03904 15.7943 8.70136 15.7943 9.10989 15.3858L12.5545 11.9412L15.9991 15.3858C16.4076 15.7943 17.0699 15.7943 17.4784 15.3858C17.8869 14.9773 17.8869 14.315 17.4784 13.9065L13.2941 9.72218Z" fill="white"/>
+    </svg>
+  </a>
+
+  <p class="cta-note">📅 Confirme sua presença pela agenda</p>
+
+  <div class="scroll-hint">
+    <span>SAIBA MAIS</span>
+    <div class="arrow-wrap">
+      <svg viewBox="0 0 31.5 7.36396" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M31.3536 4.03553C31.5488 3.84027 31.5488 3.52369 31.3536 3.32843L28.1716 0.146447C27.9763 -0.0488155 27.6597 -0.0488155 27.4645 0.146447C27.2692 0.341709 27.2692 0.658291 27.4645 0.853554L30.2929 3.68198L27.4645 6.51041C27.2692 6.70567 27.2692 7.02225 27.4645 7.21751C27.6597 7.41278 27.9763 7.41278 28.1716 7.21751L31.3536 4.03553ZM0 3.68198V4.18198H31V3.68198V3.18198H0V3.68198Z" fill="white"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- FAIXA DIVISOR -->
+<div class="faixa-divisor">
+  <div class="faixa-divisor__track">
+    <span>CREATIVE SPECIALIST&nbsp;•&nbsp;GROWTH ENGINEER&nbsp;•&nbsp;NEGÓCIOS&nbsp;•&nbsp;GESTÃO DE PESSOAS&nbsp;•&nbsp;CREATIVE SPECIALIST&nbsp;•&nbsp;GROWTH ENGINEER&nbsp;•&nbsp;NEGÓCIOS&nbsp;•&nbsp;GESTÃO DE PESSOAS&nbsp;•&nbsp;CREATIVE SPECIALIST&nbsp;•&nbsp;GROWTH ENGINEER&nbsp;•&nbsp;NEGÓCIOS&nbsp;•&nbsp;GESTÃO DE PESSOAS&nbsp;•&nbsp;</span>
+    <span>CREATIVE SPECIALIST&nbsp;•&nbsp;GROWTH ENGINEER&nbsp;•&nbsp;NEGÓCIOS&nbsp;•&nbsp;GESTÃO DE PESSOAS&nbsp;•&nbsp;CREATIVE SPECIALIST&nbsp;•&nbsp;GROWTH ENGINEER&nbsp;•&nbsp;NEGÓCIOS&nbsp;•&nbsp;GESTÃO DE PESSOAS&nbsp;•&nbsp;CREATIVE SPECIALIST&nbsp;•&nbsp;GROWTH ENGINEER&nbsp;•&nbsp;NEGÓCIOS&nbsp;•&nbsp;GESTÃO DE PESSOAS&nbsp;•&nbsp;</span>
+  </div>
+</div>
+
+<!-- SOBRE O BOOTCAMP -->
+<section class="section section--sobre" id="sobre">
+  <div class="container">
+    <span class="eyebrow reveal">Sobre o Bootcamp</span>
+    <h2 class="section-title reveal">Quatro frentes. Um só objetivo.</h2>
+    <p class="section-lead reveal">O Bootcamp Next Steps foi desenhado pra treinar o time nas disciplinas-chave do negócio e apoiar a validação da tese de cada frente. São 4 encontros, divididos em 2 finais de semana.</p>
+
+    <div class="pillars-grid">
+      <div class="pillar-card reveal">
+        <div class="icon-box"><img src="assets/icons/icon-negocios.svg" alt="" /></div>
+        <h3>Negócios</h3>
+        <p>Trusted advisor, como as empresas fazem dinheiro, leitura de DRE na prática e business modeling.</p>
+      </div>
+      <div class="pillar-card reveal">
+        <div class="icon-box"><img src="assets/icons/icon-pessoas.svg" alt="" /></div>
+        <h3>Gestão de Pessoas</h3>
+        <p>Compliance, boas práticas de gestão e os skills da cadeira de liderança.</p>
+      </div>
+      <div class="pillar-card reveal">
+        <div class="icon-box"><img src="assets/icons/icon-creative.svg" alt="" /></div>
+        <h3>Creative Specialist</h3>
+        <p>Mensagens e peças que conectam com o público e constroem marca.</p>
+      </div>
+      <div class="pillar-card reveal">
+        <div class="icon-box"><img src="assets/icons/icon-growth.svg" alt="" /></div>
+        <h3>Growth Engineer</h3>
+        <p>Sistemas e dados integrados na direção da geração de receita.</p>
+      </div>
+    </div>
+
+    <div class="section-cta reveal">
+      <a class="btn-cta" href="#programacao">
+        <span>VER PROGRAMAÇÃO</span>
+        <svg viewBox="0 0 25.1057 25.1057" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M5.60864e-05 12.5528C5.60864e-05 22.8901 2.21563 25.1057 12.5529 25.1057C22.8901 25.1057 25.1057 22.8901 25.1057 12.5528C25.1057 2.21557 22.8901 0 12.5529 0C2.21563 0 5.60864e-05 2.21557 5.60864e-05 12.5528ZM2.09219 12.5528C2.09219 15.0894 2.23084 16.9849 2.55007 18.4214C2.86401 19.834 3.32413 20.6712 3.87936 21.2263C4.43459 21.7816 5.27171 22.2417 6.68436 22.5556C8.12076 22.8749 10.0163 23.0135 12.5529 23.0135C15.0895 23.0135 16.985 22.8749 18.4214 22.5556C19.834 22.2417 20.6712 21.7816 21.2264 21.2263C21.7816 20.6712 22.2418 19.834 22.5557 18.4214C22.875 16.9849 23.0136 15.0894 23.0136 12.5528C23.0136 10.0163 22.875 8.1207 22.5557 6.68431C22.2418 5.27165 21.7816 4.43454 21.2264 3.8793C20.6712 3.32407 19.834 2.86396 18.4214 2.55001C16.985 2.23078 15.0895 2.09214 12.5529 2.09214C10.0163 2.09214 8.12076 2.23078 6.68436 2.55001C5.27171 2.86396 4.43459 3.32407 3.87936 3.8793C3.32413 4.43454 2.86401 5.27165 2.55007 6.68431C2.23084 8.1207 2.09219 10.0163 2.09219 12.5528Z" fill="white"/>
+          <path d="M13.2941 9.72218C12.8857 9.31367 12.2233 9.31367 11.8148 9.72218L7.63051 13.9065C7.222 14.315 7.222 14.9773 7.63051 15.3858C8.03904 15.7943 8.70136 15.7943 9.10989 15.3858L12.5545 11.9412L15.9991 15.3858C16.4076 15.7943 17.0699 15.7943 17.4784 15.3858C17.8869 14.9773 17.8869 14.315 17.4784 13.9065L13.2941 9.72218Z" fill="white"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMAÇÃO -->
+<section class="section section--programacao" id="programacao">
+  <div class="container">
+    <span class="eyebrow reveal">Programação</span>
+    <h2 class="section-title reveal">Os 4 encontros</h2>
+
+    <div class="agenda-grid">
+
+      <!-- DIA 1 -->
+      <div class="day-card reveal">
+        <div class="day-card__top">
+          <span class="day-pill">Dia 1</span>
+          <span class="datetime">04/09/2026 (sex) · 9:00am – 6:00pm</span>
+        </div>
+        <div class="day-card__image"><img src="assets/negocios-card.jpg" alt="Time responsável por Negócios" /></div>
+        <div>
+          <h3>Negócios</h3>
+          <ul class="desc-list">
+            <li>Trusted advisor: curiosidade genuína e escuta ativa</li>
+            <li>Como as empresas fazem dinheiro (custo de servir, vender e fixo)</li>
+            <li>Leitura de DRE na prática</li>
+            <li>Business modeling: desenhar cenários</li>
+          </ul>
+          <hr class="divider" />
+          <div class="meta">
+            <div><strong>Pra quem: </strong>toda a operação</div>
+            <div><strong>Responsáveis: </strong>Erick, Lauar e Colli</div>
+          </div>
+        </div>
+        <span class="day-notice"><span class="dot">📅</span><span>Confirme sua presença pela agenda</span></span>
+      </div>
+
+      <!-- DIA 2 -->
+      <div class="day-card reveal">
+        <div class="day-card__top">
+          <span class="day-pill">Dia 2</span>
+          <span class="datetime">05/09/2026 (sáb)</span>
+        </div>
+        <div class="day-card__image"><img src="assets/pessoas-card.jpg" alt="Time responsável por Gestão de Pessoas" /></div>
+        <div>
+          <h3>Gestão de Pessoas</h3>
+          <ul class="desc-list">
+            <li>Compliance</li>
+            <li>Boas práticas de gestão</li>
+            <li>Skills da cadeira de liderança</li>
+            <li>Indicadores de pessoas</li>
+          </ul>
+          <hr class="divider" />
+          <div class="meta">
+            <div><strong>Pra quem: </strong>coordenadores ativos da V4 Colli&amp;Co</div>
+            <div><strong>Responsáveis: </strong>Erick Cardoso, Luana Martire, Ednaldo Colli, Carolina Colli</div>
+          </div>
+        </div>
+        <span class="day-notice"><span class="dot">📅</span><span>Confirme sua presença pela agenda</span></span>
+      </div>
+
+      <!-- DIA 3 -->
+      <div class="day-card reveal">
+        <div class="day-card__top">
+          <span class="day-pill">Dia 3</span>
+          <span class="datetime">25/09/2026 (sex)</span>
+        </div>
+        <div class="day-card__image"><img src="assets/creative-card.jpg" alt="Time responsável por Creative Specialist" /></div>
+        <div>
+          <h3>Creative Specialist</h3>
+          <ul class="desc-list">
+            <li>Como produzir mensagens e peças que conectam com o cliente</li>
+            <li>Cultura, público e construção de marca</li>
+            <li>Operacionalização de assets criativos em alto nível</li>
+            <li>Da mensagem certa à peça que vende</li>
+          </ul>
+          <hr class="divider" />
+          <div class="meta">
+            <div><strong>Pra quem: </strong>designers, copywriters, social e interessados</div>
+            <div><strong>Responsáveis: </strong>Vitor Neres, Larissa Idem, Leonardo Esteves</div>
+          </div>
+        </div>
+        <span class="day-notice"><span class="dot">📅</span><span>Confirme sua presença pela agenda</span></span>
+      </div>
+
+      <!-- DIA 4 -->
+      <div class="day-card reveal">
+        <div class="day-card__top">
+          <span class="day-pill">Dia 4</span>
+          <span class="datetime">26/09/2026 (sáb)</span>
+        </div>
+        <div class="day-card__image"><img src="assets/growth-card.jpg" alt="Time responsável por Growth Engineer" /></div>
+        <div>
+          <h3>Growth Engineer</h3>
+          <ul class="desc-list">
+            <li>Como integrar sistemas e dados pra gerar receita</li>
+            <li>Compra de mídia em alta escala</li>
+            <li>Integração e consistência de dados</li>
+            <li>Operacionalização de sistemas de marketing e vendas</li>
+          </ul>
+          <hr class="divider" />
+          <div class="meta">
+            <div><strong>Pra quem: </strong>gestores de tráfego e analistas de CRM</div>
+            <div><strong>Responsáveis: </strong>João Pedro Moreira, Jean Reis, Robson Job, Luís Felipe Santos</div>
+          </div>
+        </div>
+        <span class="day-notice"><span class="dot">📅</span><span>Confirme sua presença pela agenda</span></span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- INFORMAÇÕES -->
+<section class="section section--info" id="informacoes">
+  <div class="container">
+    <span class="eyebrow reveal">Mais informações</span>
+    <h2 class="section-title reveal">O que mais você precisa saber</h2>
+
+    <div class="info-grid">
+      <div class="info-card reveal">
+        <div class="icon-box">📍</div>
+        <div>
+          <h3>Presencial em Campinas</h3>
+          <p>Todos os encontros acontecem presencialmente em Campinas, com transmissão ao vivo pra quem está em outro time ou não puder estar no local.</p>
+        </div>
+      </div>
+      <div class="info-card reveal">
+        <div class="icon-box">📜</div>
+        <div>
+          <h3>Gera certificado</h3>
+          <p>Toda participação confirmada emite certificado. Conteúdo fechado direto com os especialistas da V4 Colli&amp;Co pra você aplicar no dia a dia.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-cta reveal">
+      <a class="btn-cta" href="#programacao">
+        <span>VER PROGRAMAÇÃO</span>
+        <svg viewBox="0 0 25.1057 25.1057" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M5.60864e-05 12.5528C5.60864e-05 22.8901 2.21563 25.1057 12.5529 25.1057C22.8901 25.1057 25.1057 22.8901 25.1057 12.5528C25.1057 2.21557 22.8901 0 12.5529 0C2.21563 0 5.60864e-05 2.21557 5.60864e-05 12.5528ZM2.09219 12.5528C2.09219 15.0894 2.23084 16.9849 2.55007 18.4214C2.86401 19.834 3.32413 20.6712 3.87936 21.2263C4.43459 21.7816 5.27171 22.2417 6.68436 22.5556C8.12076 22.8749 10.0163 23.0135 12.5529 23.0135C15.0895 23.0135 16.985 22.8749 18.4214 22.5556C19.834 22.2417 20.6712 21.7816 21.2264 21.2263C21.7816 20.6712 22.2418 19.834 22.5557 18.4214C22.875 16.9849 23.0136 15.0894 23.0136 12.5528C23.0136 10.0163 22.875 8.1207 22.5557 6.68431C22.2418 5.27165 21.7816 4.43454 21.2264 3.8793C20.6712 3.32407 19.834 2.86396 18.4214 2.55001C16.985 2.23078 15.0895 2.09214 12.5529 2.09214C10.0163 2.09214 8.12076 2.23078 6.68436 2.55001C5.27171 2.86396 4.43459 3.32407 3.87936 3.8793C3.32413 4.43454 2.86401 5.27165 2.55007 6.68431C2.23084 8.1207 2.09219 10.0163 2.09219 12.5528Z" fill="white"/>
+          <path d="M13.2941 9.72218C12.8857 9.31367 12.2233 9.31367 11.8148 9.72218L7.63051 13.9065C7.222 14.315 7.222 14.9773 7.63051 15.3858C8.03904 15.7943 8.70136 15.7943 9.10989 15.3858L12.5545 11.9412L15.9991 15.3858C16.4076 15.7943 17.0699 15.7943 17.4784 15.3858C17.8869 14.9773 17.8869 14.315 17.4784 13.9065L13.2941 9.72218Z" fill="white"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer reveal">
+  <div class="container">
+    <div class="brand">
+      <img src="assets/logos.png" alt="V4 Colli&Co" />
+      <span>Bootcamp Next Steps</span>
+    </div>
+    <span class="fine">V4 Colli&amp;Co · 2026</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var canvas = document.getElementById('hero-stars');
+  if(!canvas) return;
+
+  var wrapper = canvas.parentElement;
+  var ctx = canvas.getContext('2d');
+
+  var colors = ['#ffae52','#ff7a6e','#ff2628','#fff','#d6b9b1','#936046'];
+  var mouseDistance = 60;
+  var radius = 0.8;
+  var maxRadius = 2.4;
+  var circles = [];
+  var mouse = { x: -9999, y: -9999 };
+  var w = 0, h = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+  function Circle(x, y, dx, dy, r, fill){
+    this.x = x; this.y = y; this.dx = dx; this.dy = dy;
+    this.radius = r; this.minRadius = r; this.fill = fill;
+  }
+  Circle.prototype.draw = function(){
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+    ctx.fillStyle = this.fill;
+    ctx.fill();
+  };
+  Circle.prototype.update = function(){
+    if(this.x + this.radius > w || this.x - this.radius < 0) this.dx = -this.dx;
+    if(this.y + this.radius > h || this.y - this.radius < 0) this.dy = -this.dy;
+    this.x += this.dx;
+    this.y += this.dy;
+
+    var dx = mouse.x - this.x, dy = mouse.y - this.y;
+    if(dx < mouseDistance && dx > -mouseDistance && dy < mouseDistance && dy > -mouseDistance){
+      if(this.radius < maxRadius) this.radius += 0.4;
+    } else if(this.radius > this.minRadius){
+      this.radius -= 0.4;
+    }
+    this.draw();
+  };
+
+  function resize(){
+    var rect = wrapper.getBoundingClientRect();
+    w = rect.width; h = rect.height;
+    canvas.width = w * dpr;
+    canvas.height = h * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function prepare(){
+    circles = [];
+    var count = Math.max(40, Math.min(140, Math.round((w * h) / 9000)));
+    for(var i = 0; i < count; i++){
+      var r = radius;
+      var x = Math.random() * (w - r * 2) + r;
+      var y = Math.random() * (h - r * 2) + r;
+      var dx = (Math.random() - 0.5) * 1.2;
+      var dy = (Math.random() - 0.5) * 1.2;
+      var fill = colors[Math.floor(Math.random() * colors.length)];
+      circles.push(new Circle(x, y, dx, dy, r, fill));
+    }
+  }
+
+  var rafId;
+  function animate(){
+    rafId = requestAnimationFrame(animate);
+    ctx.clearRect(0, 0, w, h);
+    for(var i = 0; i < circles.length; i++) circles[i].update();
+  }
+
+  function onMouseMove(e){
+    var rect = wrapper.getBoundingClientRect();
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
+  }
+
+  window.addEventListener('mousemove', onMouseMove, { passive: true });
+  window.addEventListener('resize', function(){ resize(); prepare(); }, { passive: true });
+
+  resize();
+  prepare();
+  animate();
+})();
+
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!els.length) return;
+
+  if(!('IntersectionObserver' in window)){
+    els.forEach(function(el){ el.classList.add('is-visible'); });
+    return;
+  }
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+
+</body>
+</html>
