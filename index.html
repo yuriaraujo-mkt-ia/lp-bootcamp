@@ -287,7 +287,7 @@
       z-index:2;
       width:100%;
       overflow-x:hidden;
-      background:#000 url('assets/novos-bgs/mobile-novo.png') no-repeat top center;
+      background:#000 url('assets/novos-bgs/mobile-melhor.png') no-repeat top center;
       background-size:100% auto;
       padding: 46.4vw 8vw 8vw;
       min-height: 165vw;
@@ -472,6 +472,7 @@
   }
 
   @media (max-width:900px){
+    .particles-wrapper{ display:none; }
     .faixa-divisor{ padding:18px 0; }
     .faixa-divisor__track span{ font-size:clamp(10px, 2.5vw, 12px); letter-spacing:1.6px; }
     .faixa-divisor__track{ animation-duration:32s; }
@@ -1358,6 +1359,10 @@
   var circles = [];
   var mouse = { x: -9999, y: -9999 };
   var isSmallScreen = window.matchMedia && window.matchMedia('(max-width:900px)').matches;
+  if(isSmallScreen){
+    wrapper.style.display = 'none';
+    return;
+  }
   var w = 0, h = 0, dpr = isSmallScreen ? 1 : Math.min(window.devicePixelRatio || 1, 2);
 
   function Circle(x, y, dx, dy, r, fill){
