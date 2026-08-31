@@ -1,0 +1,9 @@
+.git/
+.github/
+.claude/
+.playwright-cli/
+.DS_Store
+output/
+contexto-briefing/
+desktop-preview.png
+mobile-preview.png
