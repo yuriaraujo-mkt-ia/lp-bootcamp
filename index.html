@@ -778,6 +778,8 @@
 
   .day-notice--tbd .calendar-icon{ filter:grayscale(1); opacity:0.72; }
 
+  .day-card__side{ display:contents; }
+
   /* ---- Informações: local + certificado (light section, per Figma) ---- */
 
   .section--info{ background:#fff; }
@@ -855,11 +857,12 @@
 
     .day-card{
       display:grid;
-      grid-template-columns:minmax(340px, 0.9fr) minmax(0, 1.1fr);
-      grid-template-rows:auto 1fr auto;
-      column-gap:28px;
-      row-gap:16px;
-      padding:24px;
+      grid-template-columns:minmax(480px, 0.95fr) minmax(0, 1.05fr);
+      grid-template-rows:auto auto;
+      column-gap:40px;
+      row-gap:28px;
+      padding:40px;
+      border-radius:24px;
     }
 
     .day-card__top{
@@ -869,30 +872,39 @@
 
     .day-card__image{
       grid-column:1;
-      grid-row:2 / 4;
-      width:100%;
-      height:100%;
-      min-height:250px;
-    }
-
-    .day-card__content{
-      grid-column:2;
       grid-row:2;
+      width:100%;
+      height:auto;
+      min-height:0;
+      aspect-ratio:516 / 232;
       align-self:start;
     }
 
-    .day-card h3{ font-size:21px; }
+    .day-card__side{
+      grid-column:2;
+      grid-row:2;
+      min-width:0;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .day-card__content{
+      min-width:0;
+    }
+
+    .day-card h3{ font-size:24px; }
     .day-card .desc-list{ gap:7px; }
-    .day-card .desc-list li{ font-size:14.5px; line-height:1.5; }
-    .day-card .meta{ font-size:14px; }
+    .day-card .desc-list li{ font-size:16px; line-height:1.5; }
+    .day-card .meta{ font-size:16px; }
     .day-pill,
     .day-card__top .datetime{ font-size:12.5px; }
 
     .day-notice{
-      grid-column:2;
-      grid-row:3;
-      margin-top:4px;
-      font-size:13.5px;
+      margin-top:auto;
+      font-size:16px;
+      text-transform:uppercase;
     }
   }
 
@@ -1098,6 +1110,7 @@
           <span class="datetime">04/09/2026 (sex) · 9:00am – 6:00pm</span>
         </div>
         <div class="day-card__image"><img src="assets/negocios-card.jpg" alt="Time responsável por Negócios" /></div>
+        <div class="day-card__side">
         <div class="day-card__content">
           <h3>Negócios</h3>
           <ul class="desc-list">
@@ -1113,6 +1126,7 @@
           </div>
         </div>
         <span class="day-notice day-notice--confirmed"><img class="calendar-icon" src="assets/google-calendar-icon.webp" alt="" /><span>Confirme sua presença pela agenda</span></span>
+        </div>
       </div>
 
       <!-- DIA 2 -->
@@ -1122,6 +1136,7 @@
           <span class="datetime">05/09/2026 (sáb)</span>
         </div>
         <div class="day-card__image"><img src="assets/pessoas-card.jpg" alt="Time responsável por Gestão de Pessoas" /></div>
+        <div class="day-card__side">
         <div class="day-card__content">
           <h3>Gestão de Pessoas</h3>
           <ul class="desc-list">
@@ -1137,6 +1152,7 @@
           </div>
         </div>
         <span class="day-notice day-notice--confirmed"><img class="calendar-icon" src="assets/google-calendar-icon.webp" alt="" /><span>Confirme sua presença pela agenda</span></span>
+        </div>
       </div>
 
       <!-- DIA 3 -->
@@ -1146,6 +1162,7 @@
           <span class="datetime">25/09/2026 (sex)</span>
         </div>
         <div class="day-card__image"><img src="assets/creative-card.jpg" alt="Time responsável por Creative Specialist" /></div>
+        <div class="day-card__side">
         <div class="day-card__content">
           <h3>Creative Specialist</h3>
           <ul class="desc-list">
@@ -1161,6 +1178,7 @@
           </div>
         </div>
         <span class="day-notice day-notice--tbd"><img class="calendar-icon" src="assets/google-calendar-icon.webp" alt="" /><span>Agenda em breve (TBD)</span></span>
+        </div>
       </div>
 
       <!-- DIA 4 -->
@@ -1170,6 +1188,7 @@
           <span class="datetime">26/09/2026 (sáb)</span>
         </div>
         <div class="day-card__image"><img src="assets/growth-card.jpg" alt="Time responsável por Growth Engineer" /></div>
+        <div class="day-card__side">
         <div class="day-card__content">
           <h3>Growth Engineer</h3>
           <ul class="desc-list">
@@ -1185,6 +1204,7 @@
           </div>
         </div>
         <span class="day-notice day-notice--tbd"><img class="calendar-icon" src="assets/google-calendar-icon.webp" alt="" /><span>Agenda em breve (TBD)</span></span>
+        </div>
       </div>
 
     </div>
