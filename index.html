@@ -288,7 +288,7 @@
       position:relative;
       z-index:2;
       width:100%;
-      overflow-x:hidden;
+      overflow:visible;
       background:#000 url('assets/novos-bgs/mobile-melhor.png') no-repeat top center;
       background-size:100% auto;
       padding: 46.4vw 8vw 8vw;
@@ -487,6 +487,10 @@
     }
 
     html{ scroll-behavior:auto; }
+
+    /* Keep one vertical scroll owner on mobile (the document), avoiding html/body nested scrolling. */
+    html{ overflow-x:hidden !important; overflow-y:auto !important; }
+    body{ overflow:visible !important; height:auto; min-height:100%; }
   }
 
   /* ============ SCROLL REVEAL ============ */
@@ -1025,6 +1029,8 @@
 
   @media (max-width:900px){
     .section{ padding:64px 20px; }
+    /* Let the document own vertical scrolling on mobile; avoid nested scroll boundaries. */
+    .section{ overflow:visible; }
 
     /* below 900px the layout reflows to 1-2 columns — the cqw-based
        max-widths above assume the full desktop container, so free them here */
